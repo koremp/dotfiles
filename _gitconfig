@@ -1,0 +1,21 @@
+[user]
+  name = Dokyun Clair Lim
+  email = im.koremp@gmail.com
+
+[github]
+  user = "koremp"
+
+[color]
+  ui = auto
+
+[init]
+  defaultBranch = main
+
+[push]
+  default = current
+
+[pull]
+  rebase = false
+
+[core]
+  editor = nvim
