@@ -1,5 +1,5 @@
 "* Vim-Plug 목록
-let g:config_dir = expand('~/.config/nvim/config/')
+let g:config_dir = expand('~/dotfiles/nvim/config/')
 let s:file_plug_candidate = []
 
 command! -nargs=1 PlugFile call <SID>plug_file(<args>)
@@ -12,16 +12,13 @@ call plug#begin('~/.vim/plugged')
 
     "* Vim 기본 기능 확장
         Plug 'rcarriga/nvim-notify'
-            PlugFile 'set-notify.vim'
         Plug 'kamykn/popup-menu.nvim'
         Plug 'simeji/winresizer'
-            PlugFile 'set-winresizer.vim'
         PlugFile 'vim-gx-on-regex.vim'
         Plug 'Olical/vim-enmasse'
 
         "* session
         Plug 'mhinz/vim-startify'           " 시작 화면을 꾸며준다. MRU가 있어 편리하다.
-            PlugFile 'set-startify.vim'
 
         "* HUD(Head Up Display)
         Plug 'bling/vim-airline'        " BUFFER navigator, status line 을 제공한다.
@@ -34,87 +31,49 @@ call plug#begin('~/.vim/plugged')
         Plug 'kana/vim-textobj-user'
             Plug 'kana/vim-textobj-indent'
             Plug 'thinca/vim-textobj-between'
-            PlugFile 'set-vim-textobj-user.vim'
         Plug 'wellle/targets.vim'
 
         "* 편집 기능 확장
         Plug 'tpope/vim-repeat'
         Plug 'tpope/vim-surround'
-        Plug 'tpope/vim-commentary'
-        Plug 'godlygeek/tabular'           " 텍스트 세로 정렬 도구
-        Plug 'jiangmiao/auto-pairs', {'for': ['go', 'javascript', 'rust', 'kotlin']}
-        Plug 'junegunn/vim-easy-align'
-        Plug 'AndrewRadev/splitjoin.vim'
-        Plug 'tommcdo/vim-exchange'
 
         "* 커서 점프
         Plug 'easymotion/vim-easymotion'
-            PlugFile 'set-easymotion.vim'
-        Plug 't9md/vim-choosewin'
-        Plug 'vim-scripts/matchit.zip'
         Plug 'johngrib/vim-f-hangul'
 
         "* 검색
         Plug 'google/vim-searchindex'
-        " Plug 'othree/eregex.vim'
-        " Plug 'haya14busa/incsearch.vim'
-
-        "* Cursor, Color
-        Plug 'johngrib/FlatColor-johngrib'
-            PlugFile 'set-color.vim'
-        PlugFile 'set-cursor.vim'
-        " Plug 'johngrib/hosu'
 
         "* Quickfix
         Plug 'milkypostman/vim-togglelist'
-        PlugFile 'set-quickfix.vim'
 
     "* 자동완성
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-        PlugFile 'set-coc.vim'
     Plug 'SirVer/ultisnips'
-        PlugFile 'set-ultisnips.vim'
-    Plug 'github/copilot.vim'
-        PlugFile 'set-copilot.vim'
-    Plug 'tenfyzhong/axring.vim'
-        PlugFile 'set-axring.vim'
     Plug 'tpope/vim-speeddating'
 
     "* 외부 기능 지원
         "* ctags
         Plug 'vim-scripts/taglist.vim'
         Plug 'ludovicchabant/vim-gutentags' " 자동으로 tags 파일을 갱신해 준다.
-            PlugFile 'set-gutentags.vim'
         Plug 'majutsushi/tagbar'
-            PlugFile 'set-tagbar.vim'
 
         "* git
         Plug 'tpope/vim-fugitive'       " git 명령어 wrapper
         Plug 'airblade/vim-gitgutter'   " git diff 를 라인 넘버 옆에 표시.
-        Plug 'johngrib/vim-git-msg-wheel'
 
         "* ETC
         Plug 'diepm/vim-rest-console'
             PlugFile 'set-vim-rest-console.vim'
-        Plug 'johngrib/vim-mac-dictionary'
         Plug 'tridactyl/vim-tridactyl'
 
     "* File 탐색, 브라우징
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-        Plug 'junegunn/fzf.vim'
-        PlugFile 'set-fzf.vim'
-    " Plug 'preservim/nerdtree'
+    " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    "     Plug 'junegunn/fzf.vim'
+    Plug 'preservim/nerdtree'
     "     Plug 'ryanoasis/vim-devicons'
     "     PlugFile 'set-nerdtree.vim'
     " Plug 'wesleyche/srcexpl'
-    Plug 'nvim-lua/plenary.nvim'
-        Plug 'nvim-telescope/telescope.nvim'
-        PlugFile 'set-telescope.vim'
-        Plug 'nvim-lua/popup.nvim'
-        PlugFile 'set-bye2022.vim'
-
-    Plug 'laher/fuzzymenu.vim'
-        PlugFile 'set-fuzzymenu.vim'
 
     "* language 확장
     " Plug 'dense-analysis/ale', { 'do': 'brew install php-cs-fixer' }
@@ -125,7 +84,6 @@ call plug#begin('~/.vim/plugged')
         "* JavaScript
         Plug 'neoclide/coc-tsserver', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
         Plug 'ternjs/tern_for_vim', {'for': 'javascript'}
-        PlugFile 'set-javascript.vim'
 
         "* Clojure
         Plug 'guns/vim-sexp',    {'for': 'clojure'}
@@ -160,9 +118,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'johngrib/vim-game-code-break'
     Plug 'johngrib/vim-game-snake'
     " Plug 'tpope/vim-db'
-    Plug 'johngrib/vimwiki', { 'branch': 'johngrib' }
-        PlugFile 'set-vimwiki.vim'
-    Plug 'johngrib/grib-wiki'
+    Plug 'vimwiki/vimwiki'
 
     "* 미분류
     PlugFile 'set-f1-f20.vim'
@@ -173,22 +129,46 @@ call plug#end()
 syntax enable
 filetype plugin indent on
 
-for include_file in s:file_plug_candidate
-    execute "source " . include_file
-endfor
-let s:file_plug_candidate = v:null
-
 "* COC plugin 목록
 " https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#install-extensions
 " :CocUpdate
 let g:coc_global_extensions = [
+            \ 'coc-sh',
+            \ 'coc-dash-complete',
+            \ 'coc-dot-complete',
             \ 'coc-ultisnips',
-            \ 'coc-go',
+            \ 'coc-css',
+            \ 'coc-cssmodules',
+            \ 'coc-html',
+            \ 'coc-htmlhint',
+            \ 'coc-html-css-support',
+            \ 'coc-tsserver',
+            \ 'coc-eslint',
+            \ 'coc-json',
             \ 'coc-lists',
+            \ 'coc-markdownlint',
+            \ 'coc-pyright',
+            \ 'coc-sql',
+            \ 'coc-vetur',
             \ 'coc-explorer',
-            \ 'coc-rust-analyzer',
             \ 'coc-vimlsp',
             \ 'coc-comrade',
+            \ 'coc-git',
+            \ 'coc-fzf-preview',
+            \ 'coc-highlight',
+            \ 'coc-markdown-preview-enhanced',
+            \ 'coc-ltex',
+            \ 'coc-highlight',
+            \ 'coc-spell-checker',
+            \ 'coc-sql',
+            \ 'coc-stylelint',
+            \ 'coc-snippets',
+            \ 'coc-tailwindcss',
+            \ 'coc-translator',
+            \ 'coc-webview',
+            \ 'coc-xml',
+            \ 'coc-yaml',
+            \ 'coc-yank',
             \]
 
 "* vim set 설정
@@ -386,8 +366,8 @@ let g:coc_global_extensions = [
 
     set statusline+=%*
 
-    " let g:ale_fixers = { 'javascript': ['eslint'] }
-    " let g:ale_javascript_eslint_use_global = 1
+    let g:ale_fixers = { 'javascript': ['eslint'] }
+    let g:ale_javascript_eslint_use_global = 1
     let g:ale_lint_on_save = 1
     let g:ale_lint_on_text_changed = 0
     let g:ale_linters = {'clojure': ['clj-kondo']}
@@ -396,14 +376,9 @@ let g:coc_global_extensions = [
     let g:ale_set_loclist = 0
     let g:ale_set_quickfix = 1
 
-    " rainbow
-    let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
-
     " tabular
     vnoremap <C-t> :Tabularize /
 
-    nmap =a <Plug>(EasyAlign)
-    xmap =a <Plug>(EasyAlign)
 
     nnoremap <Space>w :w<CR>
     nnoremap <silent>s <nop>
@@ -412,17 +387,12 @@ let g:coc_global_extensions = [
 
     nnoremap <Space>f <Esc>:let @z=@/<CR>/\v[)"}]<CR>:let @/=@z<CR>
     nnoremap <Space>b <Esc>:let @z=@/<CR>?\v[("{]<CR>:let @/=@z<CR>
+
     " git fugitive
     nnoremap <Space>ga <cmd>Gwrite<CR>
     nnoremap <Space>gr <cmd>Gread<CR>
     nnoremap <Space>gc <cmd>Git commit<CR>
     nnoremap <Space>gb <cmd>Git blame<CR>
-
-    let g:vim_game_code_break_item_limit = 8
-
-    " let g:ale_fixers = {'php': ['php_cs_fixer']}
-    let g:ale_fixers = {}
-    let g:ale_fix_on_save = 1
 
 " functions -------------------------------------------------------------------
 function! ToggleNumber()
@@ -454,36 +424,9 @@ command! Ncd :cd %:p:h
 
 set fileencodings=utf-8,euc-kr
 
-"* iabbr 설정
-iabbr __email johngrib82@gmail.com
-iabbr <expr> __time strftime("%Y-%m-%d %H:%M:%S")
-iabbr <expr> __date strftime("%Y-%m-%d")
-iabbr <expr> __file expand('%:p')
-iabbr <expr> __name expand('%')
-iabbr <expr> __pwd expand('%:p:h')
-iabbr <expr> __branch system("git rev-parse --abbrev-ref HEAD")
-iabbr <expr> __uuid system("uuidgen")
-
 iabbr ㅇ. 있다.
 iabbr ㅇ.. 입니다.
 iabbr ㄱ.. 그리고
 
 "* 설정 파일 include
-for include_file in uniq(sort(globpath(&rtp, 'vim-include/*.vim', 0, 1)))
-    execute "source " . include_file
-endfor
-
-" augroup vimcon_2022_12_16
-"     au VimEnter * call Bye2022()
-" augroup END
-
-let g:i_mode_help_text = '
-            \ [Copilot]\n
-            \ <C-j> : 추천내용 적용.\n
-            \ <C-]> : 현재 표시되고 있는 추천을 취소한다.\n
-            \ <M-]> : 다음 추천을 표시한다.\n
-            \ <M-[> : 이전 추천을 표시한다.\n
-            \ <M-\\> : Copilot에 추천을 요청한다.\n
-            \ '
-inoremap <F1> <CMD>execute "lua vim.notify('" . g:i_mode_help_text . "')"<CR>
 

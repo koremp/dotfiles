@@ -1,0 +1,74 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+&	nvim/init.vim	/^    nnoremap & :&&<CR>$/;"	m
+<A-1>	nvim/init.vim	/^        nmap <A-1> :CocCommand explorer<CR>$/;"	m
+<A-2>	nvim/init.vim	/^        nmap <A-2> :TagbarToggle<CR>:e<CR>$/;"	m
+<A-3>	nvim/init.vim	/^        nmap <A-3> :Startify<CR>$/;"	m
+<C-e>	nvim/init.vim	/^    inoremap <C-e> <C-O>\$$/;"	m
+<C-l>	nvim/init.vim	/^    inoremap <C-l> <right>$/;"	m
+<C-t>	nvim/init.vim	/^    vnoremap <C-t> :Tabularize \/$/;"	m
+<M-/>	nvim/init.vim	/^    nnoremap <M-\/> :echom "[1]Explorer [2]Tagbar [3]Startify"<CR>$/;"	m
+<PageDown>	nvim/init.vim	/^    nnoremap <silent> <PageDown> :bprevious!<CR>$/;"	m
+<PageUp>	nvim/init.vim	/^    nnoremap <silent> <PageUp>   :bnext!<CR>$/;"	m
+<Space>*	nvim/init.vim	/^    vnoremap <Space>* y\/\\V<C-R>=escape(@",'\/\\')<CR><CR>$/;"	m
+<Space>D	nvim/init.vim	/^    nnoremap <Space>D "+yD$/;"	m
+<Space>P	nvim/init.vim	/^    nnoremap <Space>P "+P$/;"	m
+<Space>Y	nvim/init.vim	/^    nnoremap <Space>Y "+yg_$/;"	m
+<Space>b	nvim/init.vim	/^    nnoremap <Space>b <Esc>:let @z=@\/<CR>?\\v[("{]<CR>:let @\/=@z<CR>$/;"	m
+<Space>d	nvim/init.vim	/^    nnoremap <Space>d "+d$/;"	m
+<Space>d	nvim/init.vim	/^    vnoremap <Space>d "+d$/;"	m
+<Space>f	nvim/init.vim	/^    nnoremap <Space>f <Esc>:let @z=@\/<CR>\/\\v[)"}]<CR>:let @\/=@z<CR>$/;"	m
+<Space>ga	nvim/init.vim	/^    nnoremap <Space>ga <cmd>Gwrite<CR>$/;"	m
+<Space>gb	nvim/init.vim	/^    nnoremap <Space>gb <cmd>Git blame<CR>$/;"	m
+<Space>gc	nvim/init.vim	/^    nnoremap <Space>gc <cmd>Git commit<CR>$/;"	m
+<Space>gr	nvim/init.vim	/^    nnoremap <Space>gr <cmd>Gread<CR>$/;"	m
+<Space>p	nvim/init.vim	/^    nnoremap <Space>p "+p$/;"	m
+<Space>w	nvim/init.vim	/^    nnoremap <Space>w :w<CR>$/;"	m
+<Space>y	nvim/init.vim	/^    nnoremap <Space>y "+y$/;"	m
+<Space>y	nvim/init.vim	/^    vnoremap <Space>y "+y$/;"	m
+DecimalToBinary	nvim/init.vim	/^    function! DecimalToBinary(input)$/;"	f
+GetFileAddress	nvim/init.vim	/^    command! GetFileAddress :let @*=expand('%:p')$/;"	c
+GetFileAddress	nvim/init.vim	/^    command! GetFileAddress :let @*=substitute(expand("%:p"), "\/", "\\\\", "g")<CR>$/;"	c
+GetFileName	nvim/init.vim	/^    command! GetFileName :let @*=expand('%')$/;"	c
+GetFileName	nvim/init.vim	/^    command! GetFileName :let @*=substitute(expand("%"), "\/", "\\\\", "g")$/;"	c
+K	nvim/init.vim	/^    nnoremap K i<CR><Esc>$/;"	m
+Ncd	nvim/init.vim	/^command! Ncd :cd %:p:h$/;"	c
+PlugFile	nvim/init.vim	/^command! -nargs=1 PlugFile call <SID>plug_file(<args>)$/;"	c
+S	nvim/init.vim	/^    nnoremap <silent>S <nop>$/;"	m
+ToHtml	nvim/init.vim	/^command! ToHtml :so $VIMRUNTIME\/syntax\/2html.vim$/;"	c
+ToggleNumber	nvim/init.vim	/^function! ToggleNumber()$/;"	f
+Y	nvim/init.vim	/^    nnoremap Y y\$$/;"	m
+cvb	nvim/init.vim	/^    nnoremap cvb :let temp_num=DecimalToBinary(expand("<cword>"))<CR>ciw<C-r>=temp_num<CR>$/;"	m
+g:AutoPairsFlyMode	nvim/init.vim	/^    let g:AutoPairsFlyMode = 0$/;"	v
+g:AutoPairsShortcutBackInsert	nvim/init.vim	/^    let g:AutoPairsShortcutBackInsert = ''$/;"	v
+g:AutoPairsShortcutFastWrap	nvim/init.vim	/^    let g:AutoPairsShortcutFastWrap = ''$/;"	v
+g:AutoPairsShortcutJump	nvim/init.vim	/^    let g:AutoPairsShortcutJump = ''$/;"	v
+g:AutoPairsShortcutToggle	nvim/init.vim	/^    let g:AutoPairsShortcutToggle = ''$/;"	v
+g:ale_fixers	nvim/init.vim	/^    let g:ale_fixers = { 'javascript': ['eslint'] }$/;"	v
+g:ale_javascript_eslint_use_global	nvim/init.vim	/^    let g:ale_javascript_eslint_use_global = 1$/;"	v
+g:ale_keep_list_window_open	nvim/init.vim	/^    let g:ale_keep_list_window_open = 1$/;"	v
+g:ale_lint_on_save	nvim/init.vim	/^    let g:ale_lint_on_save = 1$/;"	v
+g:ale_lint_on_text_changed	nvim/init.vim	/^    let g:ale_lint_on_text_changed = 0$/;"	v
+g:ale_linters	nvim/init.vim	/^    let g:ale_linters = {'clojure': ['clj-kondo']}$/;"	v
+g:ale_open_list	nvim/init.vim	/^    let g:ale_open_list = 1$/;"	v
+g:ale_set_loclist	nvim/init.vim	/^    let g:ale_set_loclist = 0$/;"	v
+g:ale_set_quickfix	nvim/init.vim	/^    let g:ale_set_quickfix = 1$/;"	v
+g:coc_global_extensions	nvim/init.vim	/^let g:coc_global_extensions = [$/;"	v
+g:config_dir	nvim/init.vim	/^let g:config_dir = expand('~\/dotfiles\/nvim\/config\/')$/;"	v
+gj	nvim/init.vim	/^    nnoremap gj j$/;"	m
+gk	nvim/init.vim	/^    nnoremap gk k$/;"	m
+j	nvim/init.vim	/^    nnoremap j gj$/;"	m
+k	nvim/init.vim	/^    nnoremap k gk$/;"	m
+mapleader	nvim/init.vim	/^    let mapleader = "\\<Space>"$/;"	v
+maplocalleader	nvim/init.vim	/^    let maplocalleader = "\\\\"$/;"	v
+plug_file	nvim/init.vim	/^function! s:plug_file( ... )$/;"	f
+s	nvim/init.vim	/^    nnoremap <silent>s <nop>$/;"	m
+s	nvim/init.vim	/^    vnoremap <silent>s <nop>$/;"	m
+s:file_plug_candidate	nvim/init.vim	/^let s:file_plug_candidate = []$/;"	v
+s:undoDir	nvim/init.vim	/^        let s:undoDir = expand(s:vimDir . '\/undodir')$/;"	v
+s:vimDir	nvim/init.vim	/^        let s:vimDir = '$HOME\/.vim'$/;"	v
+setgroup	nvim/init.vim	/^    augroup setgroup$/;"	a
