@@ -350,7 +350,6 @@ let g:coc_global_extensions = [
     let g:ale_javascript_eslint_use_global = 1
     let g:ale_lint_on_save = 1
     let g:ale_lint_on_text_changed = 0
-    let g:ale_linters = {'clojure': ['clj-kondo']}
     let g:ale_open_list = 1
     let g:ale_keep_list_window_open = 1
     let g:ale_set_loclist = 0
@@ -404,9 +403,40 @@ command! Ncd :cd %:p:h
 
 set fileencodings=utf-8,euc-kr
 
+set langmap=ㅁa,ㅠb,ㅊc,ㅇd,ㄷe,ㄹf,ㅎg,ㅗh,ㅑi,ㅓj,ㅏk,ㅣl,ㅡm,ㅜn,ㅐo,ㅔp,ㅂq,ㄱr,ㄴs,ㅅt,ㅕu,ㅍv,ㅈw,ㅌx,ㅛy,ㅋz
+
 iabbr ㅇ. 있다.
 iabbr ㅇ.. 입니다.
 iabbr ㄱ.. 그리고
 
-"* 설정 파일 include
+"  startify
 
+" vimwiki
+let maplocalleader = "\\"
+let g:vimwiki_list = [
+    \{
+    \   'path': '~/repos/github/koremp/koremp.github.io/_wiki',
+    \   'ext': '.md',
+    \   'diary_rel_path': '.',
+    \},
+    \{
+    \   'path': '~/repos/gitlab/koremp/private-vimwiki/_wiki',
+    \   'ext': '.md',
+    \   'diary_rel_path': '.',
+    \},
+\]
+
+let g:vimwiki_conceallevel = 0
+let g:vimwiki_global_ext = 0
+
+" 자주 사용하는 vimwiki 명령어에 단축키를 취향대로 매핑해둔다
+command! WikiIndex :VimwikiIndex
+nmap <LocalLeader>ww <Plug>VimwikiIndex
+nmap <LocalLeader>wi <Plug>VimwikiIndex
+nmap <LocalLeader>w<LocalLeader>w <Plug>VimwikiMakeDiaryNote
+nmap <LocalLeader>wt :VimwikiTable<CR>
+
+" F4 키를 누르면 커서가 놓인 단어를 위키에서 검색한다.
+nnoremap <F4> :execute "VWS /" . expand("<cword>") . "/" <Bar> :lopen<CR>
+" Shift F4 키를 누르면 현재 문서를 링크한 모든 문서를 검색한다
+nnoremap <S-F4> execute "VWB" <Bar> :lopen<CR>
