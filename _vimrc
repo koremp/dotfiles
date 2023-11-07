@@ -53,7 +53,7 @@ imap jk <Esc>
 imap kj <Esc>
 
 " 명령행 한글 입력 오류 처리
-ca ㅈ w
+set langmap=ㅁa,ㅠb,ㅊc,ㅇd,ㄷe,ㄹf,ㅎg,ㅗh,ㅑi,ㅓj,ㅏk,ㅣl,ㅡm,ㅜn,ㅐo,ㅔp,ㅂq,ㄱr,ㄴs,ㅅt,ㅕu,ㅍv,ㅈw,ㅌx,ㅛy,ㅋz
 
 " ctrl-j 로 라인을 분리.
 nnoremap <NL> i<CR><ESC>
