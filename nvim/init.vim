@@ -1,12 +1,3 @@
-"* Vim-Plug 목록
-let g:config_dir = expand('~/dotfiles/nvim/config/')
-let s:file_plug_candidate = []
-
-command! -nargs=1 PlugFile call <SID>plug_file(<args>)
-function! s:plug_file( ... )
-    call add(s:file_plug_candidate, g:config_dir . a:1)
-endfunction
-
 " 아래와 같이 설정한 다음 :PlugInstall<CR> 해주면 된다.
 call plug#begin('~/.vim/plugged')
 
@@ -14,7 +5,6 @@ call plug#begin('~/.vim/plugged')
         Plug 'rcarriga/nvim-notify'
         Plug 'kamykn/popup-menu.nvim'
         Plug 'simeji/winresizer'
-        PlugFile 'vim-gx-on-regex.vim'
         Plug 'Olical/vim-enmasse'
 
         "* session
@@ -22,7 +12,6 @@ call plug#begin('~/.vim/plugged')
 
         "* HUD(Head Up Display)
         Plug 'bling/vim-airline'        " BUFFER navigator, status line 을 제공한다.
-            PlugFile 'set-airline.vim'
         Plug 'luochen1990/rainbow'      " 괄호를 level 별로 다르게 색칠한다. html 태그에도 적용.
         Plug 'kshenoy/vim-signature'    " m mark 위치를 표시해준다.
         " Plug 'ap/vim-css-color'             " #rrggbb 형식의 문자열에 색깔을 입혀준다.
@@ -64,7 +53,6 @@ call plug#begin('~/.vim/plugged')
 
         "* ETC
         Plug 'diepm/vim-rest-console'
-            PlugFile 'set-vim-rest-console.vim'
         Plug 'tridactyl/vim-tridactyl'
 
     "* File 탐색, 브라우징
@@ -93,11 +81,9 @@ call plug#begin('~/.vim/plugged')
         Plug 'liquidz/vim-iced-coc-source', {'for': 'clojure'}
         " Plug 'lambdalisue/fern.vim'
         " Plug 'liquidz/vim-iced-fern-debugger', {'for': 'clojure'}
-        PlugFile 'set-clojure.vim'
 
         "* Golang
         Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-        PlugFile 'set-golang.vim'
 
         "* Kotlin
         Plug 'udalov/kotlin-vim', {'for': 'kotlin'}
@@ -106,13 +92,11 @@ call plug#begin('~/.vim/plugged')
 
         "* Rust
         Plug 'rust-lang/rust.vim', {'for': 'rust'}
-        PlugFile 'set-rust.vim'
 
         "* yaml
         Plug 'stephpy/vim-yaml'
 
         "* tmux
-        PlugFile 'set-tmux.vim'
 
     "* Vim 기반 애플리케이션
     Plug 'johngrib/vim-game-code-break'
@@ -120,10 +104,6 @@ call plug#begin('~/.vim/plugged')
     " Plug 'tpope/vim-db'
     Plug 'vimwiki/vimwiki'
 
-    "* 미분류
-    PlugFile 'set-f1-f20.vim'
-    PlugFile 'set-backslash.vim'
-    PlugFile 'set-register.vim'
 call plug#end()
 
 syntax enable
