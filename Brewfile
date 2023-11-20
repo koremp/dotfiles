@@ -28,15 +28,12 @@ brew "go"
 brew "jq"
 brew "libressl"
 brew "llvm"
-brew "lua"
-brew "luarocks"
 brew "mas"
 brew "nethack"
 brew "node"
 brew "pinentry-mac"
 brew "pwgen"
 brew "reattach-to-user-namespace"
-brew "ripgrep"
 brew "ruby"
 brew "the_silver_searcher"
 brew "tldr"
@@ -45,7 +42,6 @@ brew "tree"
 brew "vim"
 brew "yank"
 brew "eddieantonio/eddieantonio/imgcat"
-brew "johngrib/johngrib/droller"
 brew "osx-cross/avr/avr-gcc"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"], link: false
 cask "docker"
@@ -58,10 +54,4 @@ cask "bitwarden"
 cask "hammerspoon"
 cask "firefox"
 cask "karabiner-elements"
-cask "dropbox"
 cask 'font-meslolg-nerd-font'
-mas "1Password", id: 443987910
-mas "Keynote", id: 409183694
-mas "LINE", id: 539883307
-mas "Slack", id: 803453959
-mas "Xcode", id: 497799835
