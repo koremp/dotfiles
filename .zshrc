@@ -78,13 +78,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+	zsh-z
 	git
 	fzf
 	fasd
 	asdf
-	tmux
-    zsh-wakatime
-	tmuxinator
+  zsh-wakatime
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -128,8 +127,29 @@ alias vi=nvim
 alias vim=nvim
 
 # git
-alias gs='git status'
-alias ga='git add'
+alias gs="git status"
+alias gac="git add . && git commit -m"
+alias gp="git push"
+alias gpl="git pull"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gdf="git diff"
+alias gpr="gh pr checkout"
+alias gprc="gp && gh pr create --web"
+alias gco="git checkout"
+function gbrup {
+    git branch --set-upstream-to=origin/`git branch --show-current` `git branch --show-current`
+}
+alias gbase-branch="git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'"
+function gmergebase {
+    gco `gbase-branch` && gpl && gco - && git merge `gbase-branch`
+}
+alias greset="git reset --mixed HEAD~1"
+function gcl() {
+  git clone "$1"
+  local repo_name=$(basename "$1" .git)
+  cd "$repo_name"
+  code .
+}
 
 # zshrc
 alias rc='vi ~/.zshrc && source ~/.zshrc'
@@ -140,9 +160,29 @@ alias ni='npm install'
 alias nid='npm install --save-dev'
 
 # yarn
-alias yd='yarn dev'
-alias ya='yarn add'
-alias yad='yarn add -D'
+function y() {
+  if [[ -n $1 ]]; then
+    nr "$@" 
+  else
+    ni
+  fi
+}
+alias yr="nun"
+alias yd="nr dev"
+alias ya="ni"
+alias yt="nr test"
+alias ytw="nr test --watch"
+alias yl="nr lint"
+alias ytc="nr type-check"
+alias yb="nr build"
+alias ys="nr start"
+alias yw="yarn workspace"
 
+# ctags
 alias ctags="`brew --prefix`/bin/ctags"
 
+# etc
+
+alias d="cd ~/Downloads"
+alias f="open ."
+alias ytb="youtube-dl"
