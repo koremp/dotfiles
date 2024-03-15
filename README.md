@@ -7,5 +7,8 @@
 * WebStrom
 * VSCode
 
-## refer
+## references
 
+- [johngrib 님](https://github.com/johngrib/dotfiles)
+- [eunjae-lee 님](https://github.com/eunjae-lee/dotfiles)
+- [simnalamburt 님](https://github.com/simnalamburt/.dotfiles)
