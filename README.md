@@ -9,4 +9,3 @@
 
 ## refer
 
-johngrib/dotfiles
